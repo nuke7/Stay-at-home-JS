@@ -31,8 +31,14 @@ $('#add-b').click(addButtonFunction);
 $('#remove-b').click(removeButtonFunction);
 
 let colors = ['orange', 'lime', 'lightgreen', 'magenta', 'red'];
+colors.push('purple');
 
-colors.forEach((color) => {
+colors.forEach((identifier) => { //identifier == colors numbers, as many colors there are 
     $('#box').append('<div class="box"></div>');
-    $('.box:last-child').css('background', color);
+    $('.box:last-child').css('background', identifier);
 });
+
+for (let index = 0; index < colors.length; index++) {
+    console.log(index);
+
+}
