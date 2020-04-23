@@ -39,6 +39,6 @@ colors.forEach((identifier) => { //identifier == colors numbers, as many colors 
 });
 
 for (let index = 0; index < colors.length; index++) {
+    let identifier = colors[index];
     console.log(index);
-
 }
