@@ -14,11 +14,22 @@ $('h2').toggleClass(color);
 
 $('ul').append('<li> My name is ' + name + '</li>');
 
-let addButtonFunction = () => {
-    if ($('li').length < 7) {
-        $('ul').append('<li> My name is ' + name + '</li>');
+let username = document.getElementById("username").value;
+
+let getInput = () => {
+    var username = document.getElementById("username").value;
+    if ($('li').length < 9) {
+        $('ul').append('<li> My name is ' + username + '</li>');
     }
+    alert('new username is: ' + username);
 };
+
+/*let addButtonFunction = () => {
+    if ($('li').length < 7) {
+        $('ul').append('<li> My name is ' + username + '</li>');
+    }
+};*/
+
 
 let removeButtonFunction = () => {
     if ($('li').length > 1) {
@@ -26,14 +37,15 @@ let removeButtonFunction = () => {
     }
 }
 
-$('#add-b').click(addButtonFunction);
+$('#add-b').click(getInput);
+/*$('#add-b').click(addButtonFunction);*/
 
 $('#remove-b').click(removeButtonFunction);
 
 let colors = ['orange', 'lime', 'lightgreen', 'magenta', 'red'];
 colors.push('purple');
 
-colors.forEach((identifier) => { //identifier == colors numbers, as many colors there are 
+colors.forEach((identifier) => { //identifier == colors numbers, as many, as colors there are 
     $('#box').append('<div class="box"></div>');
     $('.box:last-child').css('background', identifier);
 });

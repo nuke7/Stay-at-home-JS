@@ -1,6 +1,7 @@
 h1 {
     background-color: rgb(158, 6, 6);
     color: seashell;
+    text-align: center;
 }
 
 span {
@@ -16,7 +17,8 @@ span {
 }
 
 h2 {
-    width: 300px;
+    width: 400px;
+    text-align: center;
 }
 
 .box {
